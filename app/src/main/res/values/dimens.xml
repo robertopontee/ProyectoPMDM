@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name ="margen_pantalla">16dp</dimen>
+    <dimen name ="margen_titulo">60dp</dimen>
+    <dimen name="margen_boton_arriba">50dp</dimen>
+    <dimen name="tamaño_titulo">60sp</dimen>
+    <dimen name="tamaño_titulo_ET">20sp</dimen>
+</resources>

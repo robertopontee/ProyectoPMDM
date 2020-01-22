@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/zeldabackground"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        tools:context=".RegistroActivity">
+
+        <TextView
+            android:id="@+id/TituloRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:text="@string/registro"
+            android:textSize="@dimen/tamaño_titulo"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/etUsrRegistro"
+            android:layout_width="130dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/nombre_usuario"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TituloRegistro" />
+
+        <TextView
+            android:id="@+id/etMailRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="44dp"
+            android:text="Correo elec"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUsrRegistro" />
+
+        <TextView
+            android:id="@+id/etPwdRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/contrase_a"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etMailRegistro" />
+
+        <TextView
+            android:id="@+id/etRepPwdRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/repetir_pwd"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etPwdRegistro" />
+
+        <EditText
+            android:id="@+id/etIntUsrRegistro"
+            android:layout_width="196dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="@string/ET_introduce_usuario"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textSize="@dimen/tamaño_titulo_ET"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/etUsrRegistro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/etUsrRegistro" />
+
+        <EditText
+            android:id="@+id/etIntMailRegistro"
+            android:layout_width="196dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="@string/introduce_su_correo"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textSize="@dimen/tamaño_titulo_ET"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/etMailRegistro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/etMailRegistro" />
+
+        <EditText
+            android:id="@+id/etIntPwdRegistro"
+            android:layout_width="196dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="@string/introzca_su_contrase_a_reg"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textSize="@dimen/tamaño_titulo_ET"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/etPwdRegistro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/etPwdRegistro" />
+
+        <EditText
+            android:id="@+id/etIntRepPwdRegistro"
+            android:layout_width="196dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="20dp"
+            android:ems="10"
+            android:hint="@string/repita_su_contrase_a"
+            android:inputType="numberPassword"
+            android:textAlignment="center"
+            android:textSize="@dimen/tamaño_titulo_ET"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/etRepPwdRegistro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/etRepPwdRegistro" />
+
+        <Button
+            android:id="@+id/btRegistro"
+            android:layout_width="223dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="44dp"
+            android:drawableStart="@drawable/ic_adb_black_24dp"
+            android:text="@string/registrarse"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:onClick="cambiarActivityMain"
+            app:backgroundTint="#ef9a9a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRepPwdRegistro" />
+
+        <TextView
+            android:id="@+id/etYaTienesCuentaRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="16dp"
+            android:linksClickable="true"
+            android:onClick="cambiarActivityMain"
+            android:text="@string/ya_tiene_una_cuenta"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btRegistro"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
