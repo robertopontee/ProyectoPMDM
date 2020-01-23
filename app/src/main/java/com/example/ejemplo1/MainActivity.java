@@ -3,6 +3,7 @@ package com.example.ejemplo1;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
@@ -27,14 +28,25 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
+
+//    EditText TXT_USR, TXT_PASS;
+
+//    Button BTN_ING;
+
     private TextView texto;
     @Nullable
     private Bundle savedInstanceState;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        TXT_USR = (EditText)findViewById(R.id.etIniciarSesion);
+
+
+
 
 
             }
@@ -100,9 +112,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void mostrarContraseña(View v){
-      View view =  findViewById(R.id.etintContraseña);
-        view.findViewById(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+    public void mostrarContrasenha(View v){
+      EditText view =  findViewById(R.id.etintContraseña);
+      view.setInputType(InputType.TYPE_TEXT_VARIATION_NORMAL);
     }
 
 
@@ -110,16 +122,20 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void cambiarMensaje(View v) {
-        SimpleDateFormat formato = new SimpleDateFormat("HH:mm");
-        Date fechaActual = Calendar.getInstance().getTime();
 
 
-        String s = formato.format(fechaActual);
-        texto.setText(String.format("Hora de inicio de sesión: %s", s));
-
-
-    }
+//    public void cambiarMensaje(View v) {
+//        SimpleDateFormat formato = new SimpleDateFormat("HH:mm");
+//        Date fechaActual = Calendar.getInstance().getTime();
+//
+//
+//        String s = formato.format(fechaActual);
+//          texto.setText(String.format("Hora de inicio de sesión: %s", s));
+//
+//
+//
+//
+//    }
 
 
 
