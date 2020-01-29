@@ -1,182 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:background="@drawable/fondoandroid"
-    android:layout_height="match_parent">
-
-
-<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/svIniciarSesion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:padding="@dimen/margen_pantalla"
-    tools:context=".MainActivity">
+    android:background="@drawable/fondoandroid">
 
 
-    <ImageButton
-        android:id="@+id/ibShowPwd"
-        android:layout_width="49dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="56dp"
-        android:background="@color/colorPrimary"
-        android:onClick="mostrarContrasenha"
-        app:layout_constraintBottom_toTopOf="@+id/cbMantener"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etintContraseña"
-        app:layout_constraintVertical_bias="0.166"
-        app:srcCompat="@android:drawable/ic_menu_view" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-    <TextView
-        android:id="@+id/etIniciarSesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/ET_Inicio_Sesion"
-        android:textSize="@dimen/tamaño_titulo"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="@dimen/margen_pantalla"
+        tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etUser"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:ems="10"
-        android:hint="@string/ET_introduce_usuario"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textSize="@dimen/tamaño_titulo_ET"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/etNombre"
-        app:layout_constraintStart_toEndOf="@+id/etNombre"
-        app:layout_constraintTop_toTopOf="@+id/etNombre"
-        app:layout_constraintVertical_bias="0.476" />
 
-    <EditText
-        android:id="@+id/etintContraseña"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/ET_introduce_contraseña"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        app:layout_constraintStart_toEndOf="@+id/etContraseña"
-        app:layout_constraintTop_toBottomOf="@+id/etUser" />
+        <ImageButton
+            android:id="@+id/ibShowPwd"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="56dp"
+            android:background="@color/colorPrimary"
+            android:onClick="mostrarContrasenha"
+            app:layout_constraintBottom_toTopOf="@+id/cbMantener"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etintContraseña"
+            app:layout_constraintVertical_bias="0.166"
+            app:srcCompat="@android:drawable/ic_menu_view" />
 
-    <TextView
-        android:id="@+id/etNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/ET_nombre"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etIniciarSesion" />
+        <TextView
+            android:id="@+id/etIniciarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/ET_Inicio_Sesion"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tamaño_titulo"
+            android:textStyle="italic"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/etContraseña"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="@string/ET_contraseña"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/etintContraseña"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre"
-        app:layout_constraintVertical_bias="0.835" />
+        <EditText
+            android:id="@+id/etUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:ems="10"
+            android:hint="@string/ET_introduce_usuario"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tamaño_titulo_ET"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/etNombre"
+            app:layout_constraintStart_toEndOf="@+id/etNombre"
+            app:layout_constraintTop_toTopOf="@+id/etNombre"
+            app:layout_constraintVertical_bias="0.476" />
 
-    <CheckBox
-        android:id="@+id/cbMantener"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:text="@string/ET_mantener_sesion_iniciada"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
+        <EditText
+            android:id="@+id/etintContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/ET_introduce_contraseña"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@+id/etContraseña"
+            app:layout_constraintTop_toBottomOf="@+id/etUser" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="223dp"
-        android:layout_height="123dp"
-        android:layout_marginTop="48dp"
-        android:drawableStart="@drawable/ic_adb_black_24dp"
-        android:text="@string/BT_Entrar"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="italic"
-      
-        app:backgroundTint="#ef9a9a"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cbMantener" />
+        <TextView
+            android:id="@+id/etNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/ET_nombre"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etIniciarSesion" />
 
-    <TextView
-        android:id="@+id/etRecuperar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:linksClickable="true"
-        android:onClick="recuperarcontraseña"
-        android:text="@string/ET_no_puede_iniciar_sesion"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        <TextView
+            android:id="@+id/etContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/ET_contraseña"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/etintContraseña"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNombre"
+            app:layout_constraintVertical_bias="0.835" />
 
-    <TextView
-        android:id="@+id/etCrearCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:linksClickable="true"
-        android:text="@string/ET_crear_cuenta"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        android:onClick="cambiarActivityRegistro"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etRecuperar" />
+        <CheckBox
+            android:id="@+id/cbMantener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="144dp"
+            android:text="@string/ET_mantener_sesion_iniciada"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.32" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="223dp"
+            android:layout_height="123dp"
+            android:layout_marginTop="48dp"
+            android:drawableStart="@drawable/ic_adb_black_24dp"
+            android:text="@string/BT_Entrar"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            app:backgroundTint="#ef9a9a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbMantener" />
+
+        <TextView
+            android:id="@+id/etRecuperar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:linksClickable="true"
+            android:onClick="recuperarcontraseña"
+            android:text="@string/ET_no_puede_iniciar_sesion"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <TextView
+            android:id="@+id/etCrearCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:linksClickable="true"
+            android:onClick="cambiarActivityRegistro"
+            android:text="@string/ET_crear_cuenta"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRecuperar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
 
