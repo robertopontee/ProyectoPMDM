@@ -1,4 +1,4 @@
-package com.example.ejemplo1;
+package com.example.ejemplo1.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.ejemplo1.R;
 
 public class RegistroActivity extends AppCompatActivity {
 

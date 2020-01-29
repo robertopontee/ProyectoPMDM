@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
 
         android:padding="@dimen/margen_pantalla"
-        tools:context=".MainActivity">
+        tools:context=".activities.MainActivity">
 
 
         <ImageButton

@@ -1,30 +1,20 @@
-package com.example.ejemplo1;
+package com.example.ejemplo1.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.text.InputType;
-import android.text.method.HideReturnsTransformationMethod;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Calendar;
-import java.util.Date;
+import com.example.ejemplo1.R;
 
 public class MainActivity extends AppCompatActivity {
 
