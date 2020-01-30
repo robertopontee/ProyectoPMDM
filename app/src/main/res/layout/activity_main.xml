@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:linksClickable="true"
-            android:onClick="cambiarActivityRegistro"
+            android:onClick="cambiarActivityLista"
             android:text="@string/ET_crear_cuenta"
             android:textColor="@android:color/white"
             android:textSize="20sp"

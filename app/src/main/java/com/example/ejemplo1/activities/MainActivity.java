@@ -2,6 +2,8 @@ package com.example.ejemplo1.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,6 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ejemplo1.R;
+import com.example.ejemplo1.adapters.AdapterPeliculas;
+import com.example.ejemplo1.entidades.Peliculas;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +41,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 //        TXT_USR = (EditText)findViewById(R.id.etIniciarSesion);
+
+
+        RecyclerView rvPeliculas =findViewById(R.id.rvPeliculas);
+        rvPeliculas.setLayoutManager(new LinearLayoutManager(this));
+        rvPeliculas.setHasFixedSize(true);
+
+        //Adapter
+
+        //Hacemos la Lista de las Peliculas
+
+        List<Peliculas> peliculas = crearPeliculas();
+
+        //Creamos el objeto Adapter para la Lista de Peliculas
+
+        AdapterPeliculas ListAdapter = new AdapterPeliculas(this, peliculas);
+
+        rvPeliculas.setAdapter(ListAdapter);
 
 
 
@@ -89,7 +113,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private List<Peliculas> crearPeliculas(){
+        Peliculas p = new Peliculas();
+        p.setTituloPelicula("El viaje de Chihiro");
+        p.setGenero("Fantasía");
+        p.setEdad(+6);
+        p.setVisto(true);
 
+        Peliculas p2 = new Peliculas();
+        p2.setTituloPelicula("La Princesa Mononoke");
+        p2.setGenero("Accion");
+        p2.setEdad(+8);
+        p2.setVisto(false);
+
+        List<Peliculas> peliculasList = new ArrayList<>();
+
+        peliculasList.add(p);
+        peliculasList.add(p2);
+
+
+        return peliculasList;
+    }
 
 
     public void cambiarActivityRegistro(View v){
@@ -99,6 +143,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void cambiarActivityMain(View v){
         Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void cambiarActivityLista(View v){
+        Intent intent = new Intent(this, AdapterPeliculas.class);
         startActivity(intent);
     }
 
