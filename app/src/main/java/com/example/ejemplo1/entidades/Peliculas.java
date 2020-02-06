@@ -4,7 +4,10 @@ public class Peliculas {
     private int Edad;
     private String TituloPelicula;
     private String Genero;
+    private int imagen;
     private boolean visto;
+
+
 
     public int getEdad() {
         return Edad;
@@ -46,5 +49,5 @@ public class Peliculas {
         this.imagen = imagen;
     }
 
-    private int imagen;
+
 }

@@ -9,14 +9,13 @@
 
     <TextView
         android:id="@+id/tvTituloPelicula"
-        android:layout_width="128dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="370dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Pelicula"
-        android:textSize="42dp"
-        app:layout_constraintEnd_toStartOf="@+id/tvGeneroPelicula"
+        android:textSize="32dp"
+        android:textColor="@android:color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,13 +36,12 @@
         android:id="@+id/tvGeneroPelicula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
         android:text="Genero"
-        android:textSize="42dp"
-        app:layout_constraintEnd_toStartOf="@+id/tvEdadRecomendada"
-        app:layout_constraintStart_toEndOf="@+id/tvTituloPelicula"
+        android:textSize="32dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -51,12 +49,13 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="10dp"
         android:text="Edad"
-        android:textSize="42dp"
+        android:textSize="32dp"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toEndOf="@+id/tvGeneroPelicula"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,19 +65,21 @@
         android:layout_height="51dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:text="Vista"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rbPelicula" />
 
     <RatingBar
         android:id="@+id/rbPelicula"
-        android:layout_width="137dp"
-        android:layout_height="62dp"
+        android:layout_width="145dp"
+        android:layout_height="53dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/swPelicula"
         app:layout_constraintStart_toEndOf="@+id/imageView" />

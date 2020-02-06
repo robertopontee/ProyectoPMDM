@@ -42,27 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        TXT_USR = (EditText)findViewById(R.id.etIniciarSesion);
 
-
-        RecyclerView rvPeliculas =findViewById(R.id.rvPeliculas);
-        rvPeliculas.setLayoutManager(new LinearLayoutManager(this));
-        rvPeliculas.setHasFixedSize(true);
-
-        //Adapter
-
-        //Hacemos la Lista de las Peliculas
-
-        List<Peliculas> peliculas = crearPeliculas();
-
-        //Creamos el objeto Adapter para la Lista de Peliculas
-
-        AdapterPeliculas ListAdapter = new AdapterPeliculas(this, peliculas);
-
-        rvPeliculas.setAdapter(ListAdapter);
-
-
-
-
-
             }
 
 
@@ -113,27 +92,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private List<Peliculas> crearPeliculas(){
-        Peliculas p = new Peliculas();
-        p.setTituloPelicula("El viaje de Chihiro");
-        p.setGenero("Fantasía");
-        p.setEdad(+6);
-        p.setVisto(true);
-
-        Peliculas p2 = new Peliculas();
-        p2.setTituloPelicula("La Princesa Mononoke");
-        p2.setGenero("Accion");
-        p2.setEdad(+8);
-        p2.setVisto(false);
-
-        List<Peliculas> peliculasList = new ArrayList<>();
-
-        peliculasList.add(p);
-        peliculasList.add(p2);
-
-
-        return peliculasList;
-    }
 
 
     public void cambiarActivityRegistro(View v){
@@ -147,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cambiarActivityLista(View v){
-        Intent intent = new Intent(this, AdapterPeliculas.class);
+        Intent intent = new Intent(this, ListaPeliculasActivity.class);
         startActivity(intent);
     }
 

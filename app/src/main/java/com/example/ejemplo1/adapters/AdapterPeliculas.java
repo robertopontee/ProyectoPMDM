@@ -1,13 +1,16 @@
 package com.example.ejemplo1.adapters;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ejemplo1.R;
@@ -44,7 +47,7 @@ public class AdapterPeliculas extends RecyclerView.Adapter<AdapterPeliculas.MiVi
         holder.tvTituloPelicula.setText(p.getTituloPelicula());
         holder.tvGeneroPelicula.setText(p.getGenero());
         holder.tvEdadPelicula.setText(Integer.toString(p.getEdad()));
-        holder.swVisto.setChecked(true);
+        holder.swVisto.setChecked(false);
 
 
     }
@@ -60,6 +63,7 @@ public class AdapterPeliculas extends RecyclerView.Adapter<AdapterPeliculas.MiVi
         TextView tvGeneroPelicula;
         TextView tvEdadPelicula;
         Switch swVisto;
+        ImageView ivFoto;
 
 
         public MiViewHolder(@NonNull View itemView){
@@ -68,6 +72,7 @@ public class AdapterPeliculas extends RecyclerView.Adapter<AdapterPeliculas.MiVi
             tvGeneroPelicula = itemView.findViewById(R.id.tvGeneroPelicula);
             tvEdadPelicula = itemView.findViewById(R.id.tvEdadRecomendada);
             swVisto = itemView.findViewById(R.id.swPelicula);
+            ivFoto = itemView.findViewById(R.id.imageView);
 
 
 

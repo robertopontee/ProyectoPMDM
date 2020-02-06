@@ -130,8 +130,7 @@
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="italic"
-
-            app:backgroundTint="#ef9a9a"
+            android:onClick="cambiarActivityLista"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
