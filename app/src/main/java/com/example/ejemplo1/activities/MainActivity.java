@@ -27,6 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private SharedPreferences sharedPref;
+    private EditText etEmail;
+    private EditText etPass;
+
 
 
 //    EditText TXT_USR, TXT_PASS;
@@ -43,9 +47,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sharedPref = getSharedPreferences("login", Context.MODE_PRIVATE);
+
         Button btnGuardar = findViewById(R.id.btRegistro);
-        final EditText etEmail = findViewById(R.id.etIntMailRegistro);
-        final EditText etPass = findViewById(R.id.etintContraseña);
+        etEmail = findViewById(R.id.etIntMailRegistro);
+        etPass = findViewById(R.id.etintContraseña);
 
 
         btnGuardar.setOnClickListener(new View.OnClickListener() {
@@ -54,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
                 String password = etPass.getText().toString();
 
-                SharedPreferences sp = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-                SharedPreferences.Editor editor = sp.edit();
+
+                SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putString("email" , email);
                 editor.putString("contrasenha", password);
                 editor.commit();

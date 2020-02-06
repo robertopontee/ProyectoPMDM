@@ -42,14 +42,15 @@ public class ListaPeliculasActivity extends AppCompatActivity {
         p.setTituloPelicula("El viaje de Chihiro");
         p.setGenero("Fantasía");
         p.setEdad(+6);
-        p.setVisto(false);
-//        p.setImagen(1, );
+        p.setVisto(true);
+        p.setImagen(R.drawable.imagenchihiro);
 
         Peliculas p2 = new Peliculas();
         p2.setTituloPelicula("La Princesa Mononoke");
         p2.setGenero("Accion");
         p2.setEdad(+8);
         p2.setVisto(false);
+        p2.setImagen(R.drawable.imagenmononoke);
 
         List<Peliculas> peliculasList = new ArrayList<>();
 

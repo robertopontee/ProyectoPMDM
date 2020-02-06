@@ -47,7 +47,8 @@ public class AdapterPeliculas extends RecyclerView.Adapter<AdapterPeliculas.MiVi
         holder.tvTituloPelicula.setText(p.getTituloPelicula());
         holder.tvGeneroPelicula.setText(p.getGenero());
         holder.tvEdadPelicula.setText(Integer.toString(p.getEdad()));
-        holder.swVisto.setChecked(false);
+        holder.swVisto.setChecked(p.isVisto());
+        holder.ivFoto.setImageResource(p.getImagen());
 
 
     }
@@ -74,9 +75,7 @@ public class AdapterPeliculas extends RecyclerView.Adapter<AdapterPeliculas.MiVi
             swVisto = itemView.findViewById(R.id.swPelicula);
             ivFoto = itemView.findViewById(R.id.imageView);
 
-
-
-
         }
     }
 }
+
