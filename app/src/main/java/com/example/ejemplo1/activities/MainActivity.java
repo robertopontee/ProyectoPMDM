@@ -27,9 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private SharedPreferences sharedPref;
-    private EditText etEmail;
-    private EditText etPass;
+
 
 
 
@@ -47,29 +45,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sharedPref = getSharedPreferences("login", Context.MODE_PRIVATE);
 
-        Button btnGuardar = findViewById(R.id.btRegistro);
-        etEmail = findViewById(R.id.etIntMailRegistro);
-        etPass = findViewById(R.id.etintContraseña);
-
-
-        btnGuardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = etEmail.getText().toString();
-                String password = etPass.getText().toString();
-
-
-
-                SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putString("email" , email);
-                editor.putString("contrasenha", password);
-                editor.commit();
-
-
-            }
-        });
 
 
 
@@ -194,16 +170,10 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(i);
 //    }
 //
-    public void recuperarcontraseña (View v){
-
-        String url = "https://recovery.riotgames.com/es/forgot-password?region=EUW1";
-
-        Intent i = new Intent(Intent.ACTION_VIEW);
-        i.setData(Uri.parse(url));
-        startActivity(i);
 
 
-    }
+
+
 
 
 //        public boolean onTouchEvent (View v, MotionEvent event){

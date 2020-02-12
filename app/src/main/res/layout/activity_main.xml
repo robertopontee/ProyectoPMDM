@@ -6,7 +6,7 @@
     android:id="@+id/svIniciarSesion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoandroid">
+    android:background="@android:color/holo_blue_light">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,14 +33,16 @@
 
         <TextView
             android:id="@+id/etIniciarSesion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_width="292dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="48dp"
+            android:background="@color/FondoTitulo"
             android:text="@string/ET_Inicio_Sesion"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/tamaño_titulo"
-            android:textStyle="italic"
-            app:layout_constraintHorizontal_bias="0.467"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -85,9 +87,9 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="28dp"
             android:text="@string/ET_nombre"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="italic"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etIniciarSesion" />
 
@@ -97,9 +99,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/ET_contraseña"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="italic"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/etintContraseña"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etNombre"
@@ -109,10 +111,10 @@
             android:id="@+id/cbMantener"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="144dp"
+            android:layout_marginTop="120dp"
             android:text="@string/ET_mantener_sesion_iniciada"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
@@ -121,18 +123,18 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="223dp"
-            android:layout_height="123dp"
-            android:layout_marginTop="48dp"
+            android:layout_width="231dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="16dp"
             android:drawableStart="@drawable/ic_adb_black_24dp"
+            android:onClick="cambiarActivityLista"
             android:text="@string/BT_Entrar"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="20sp"
-            android:textStyle="italic"
-            android:onClick="cambiarActivityLista"
+            android:textStyle="bold"
+            app:backgroundTint="#ef9a9a"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cbMantener" />
 
@@ -140,15 +142,14 @@
             android:id="@+id/etRecuperar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="24dp"
             android:linksClickable="true"
             android:onClick="recuperarcontraseña"
             android:text="@string/ET_no_puede_iniciar_sesion"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.516"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -160,7 +161,7 @@
             android:linksClickable="true"
             android:onClick="cambiarActivityLista"
             android:text="@string/ET_crear_cuenta"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"

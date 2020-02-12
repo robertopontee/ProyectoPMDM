@@ -50,13 +50,20 @@ public class ListaPeliculasActivity extends AppCompatActivity {
         p2.setGenero("Accion");
         p2.setEdad(+8);
         p2.setVisto(false);
-        p2.setImagen(R.drawable.imagenmononoke);
+        p2.setImagen(R.drawable.princesamonono);
+
+        Peliculas p3 = new Peliculas();
+        p3.setTituloPelicula("Totoro");
+        p3.setGenero("Fantasia");
+        p3.setEdad(+10);
+        p3.setVisto(false);
+        p3.setImagen(R.drawable.imagentotoro);
 
         List<Peliculas> peliculasList = new ArrayList<>();
 
         peliculasList.add(p);
         peliculasList.add(p2);
-
+        peliculasList.add(p3);
 
         return peliculasList;
     }

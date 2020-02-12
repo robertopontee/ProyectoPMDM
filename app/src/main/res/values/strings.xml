@@ -21,5 +21,7 @@
     <string name="e_mail">E-mail</string>
     <string name="nombre_usuario">Nombre Usuario</string>
     <string name="registro">REGISTRO</string>
-    <string name="lista_de_peliculas">LISTA DE PELICULAS</string>
+    <string name="lista_de_peliculas">Lista de Películas</string>
+    <string name="DialogContraseñaDiferente">Las Contraseñas no coinciden</string>
+    <string name="validar">Vale</string>
 </resources>

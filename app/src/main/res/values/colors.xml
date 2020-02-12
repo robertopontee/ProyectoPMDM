@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#7B1FA2</color>
     <color name="colorAccent">#536DFE</color>
     <color name="color_titulo">#383984</color>
+    <color name="FondoTitulo">#7C4DFF</color>
 </resources>
