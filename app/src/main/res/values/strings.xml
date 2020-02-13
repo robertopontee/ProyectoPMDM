@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EjemploLogin</string>
+    <string name="app_name">Peliculas</string>
     <string name="ET_Inicio_Sesion">Iniciar Sesión</string>
     <string name="ET_introduce_usuario">Introduzca su usuario</string>
     <string name="ET_introduce_contraseña">Introduzca su Contraseña</string>

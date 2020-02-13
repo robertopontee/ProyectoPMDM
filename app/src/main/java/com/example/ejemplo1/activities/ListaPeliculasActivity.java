@@ -39,6 +39,7 @@ public class ListaPeliculasActivity extends AppCompatActivity {
 
     private List<Peliculas> crearPeliculas(){
         Peliculas p = new Peliculas();
+
         p.setTituloPelicula("El viaje de Chihiro");
         p.setGenero("Fantasía");
         p.setEdad(+6);

@@ -2,14 +2,9 @@ package com.example.ejemplo1.activities;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -20,11 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ejemplo1.R;
-import com.example.ejemplo1.adapters.AdapterPeliculas;
-import com.example.ejemplo1.entidades.Peliculas;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,13 +35,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final Button btnEntrar = findViewById(R.id.btEntrar);
+
+
+        btnEntrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(v.getContext(), ListaPeliculasActivity.class);
+
+                startActivity(intent);
+
+            }
+        });
 
 
 
 
 
 
-//        TXT_USR = (EditText)findViewById(R.id.etIniciarSesion);
+
 
             }
 
