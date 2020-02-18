@@ -24,4 +24,5 @@
     <string name="lista_de_peliculas">Lista de Películas</string>
     <string name="DialogContraseñaDiferente">Las Contraseñas no coinciden</string>
     <string name="validar">Vale</string>
+    <string name="DialogUsarioContraseñaMalIntroducidos">El Correo y la Contraseña no coinciden</string>
 </resources>

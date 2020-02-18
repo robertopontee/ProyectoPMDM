@@ -27,7 +27,7 @@
             android:onClick="mostrarContrasenha"
             app:layout_constraintBottom_toTopOf="@+id/cbMantener"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etintContraseña"
+            app:layout_constraintTop_toBottomOf="@+id/etintContraseñaMain"
             app:layout_constraintVertical_bias="0.166"
             app:srcCompat="@android:drawable/ic_menu_view" />
 
@@ -48,10 +48,10 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/etUser"
+            android:id="@+id/etIntCorreoMain"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="34dp"
             android:ems="10"
             android:hint="@string/ET_introduce_usuario"
             android:inputType="textPersonName"
@@ -59,13 +59,13 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/tamaño_titulo_ET"
             android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/etNombre"
-            app:layout_constraintStart_toEndOf="@+id/etNombre"
-            app:layout_constraintTop_toTopOf="@+id/etNombre"
+            app:layout_constraintBottom_toBottomOf="@+id/etCorreoMain"
+            app:layout_constraintStart_toEndOf="@+id/etCorreoMain"
+            app:layout_constraintTop_toTopOf="@+id/etCorreoMain"
             app:layout_constraintVertical_bias="0.476" />
 
         <EditText
-            android:id="@+id/etintContraseña"
+            android:id="@+id/etintContraseñaMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -78,15 +78,15 @@
             android:textSize="20sp"
             android:textStyle="italic"
             app:layout_constraintStart_toEndOf="@+id/etContraseña"
-            app:layout_constraintTop_toBottomOf="@+id/etUser" />
+            app:layout_constraintTop_toBottomOf="@+id/etIntCorreoMain" />
 
         <TextView
-            android:id="@+id/etNombre"
+            android:id="@+id/etCorreoMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="28dp"
-            android:text="@string/ET_nombre"
+            android:text="Correo E."
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -102,9 +102,9 @@
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/etintContraseña"
+            app:layout_constraintBottom_toBottomOf="@+id/etintContraseñaMain"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etNombre"
+            app:layout_constraintTop_toBottomOf="@+id/etCorreoMain"
             app:layout_constraintVertical_bias="0.835" />
 
         <CheckBox
@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:linksClickable="true"
-            android:onClick="cambiarActivityLista"
+            android:onClick="cambiarActivityRegistro"
             android:text="@string/ET_crear_cuenta"
             android:textColor="@android:color/black"
             android:textSize="20sp"
@@ -175,6 +175,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.32" />
+
+        <TextView
+            android:id="@+id/tvDatos"
+            android:layout_width="199dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

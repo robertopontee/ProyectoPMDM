@@ -1,10 +1,14 @@
 package com.example.ejemplo1.activities;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -17,6 +21,11 @@ import android.widget.Toast;
 import com.example.ejemplo1.R;
 
 public class MainActivity extends AppCompatActivity {
+    private SharedPreferences sharedPref;
+    private TextView tvDatos;
+    private EditText etIntCorreo;
+    private EditText etIntContraseña;
+    private Activity miActivity;
 
 
 
@@ -35,16 +44,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        miActivity = this;
+
+        sharedPref = getSharedPreferences("login", Context.MODE_PRIVATE);
+
         final Button btnEntrar = findViewById(R.id.btEntrar);
+        tvDatos = findViewById(R.id.tvDatos);
+        etIntCorreo = findViewById(R.id.etIntCorreoMain);
+        etIntContraseña = findViewById(R.id.etintContraseñaMain);
+
+        String em = sharedPref.getString("email", "");
+        String pw = sharedPref.getString("contrasenha", "");
+
+        tvDatos.setText("Email: " +   em + "/n"  + "Contrasenha:" + pw);
 
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(v.getContext(), ListaPeliculasActivity.class);
 
-                startActivity(intent);
+
+                if(sharedPref.getString("email", "").equals(etIntCorreo.getText().toString()) &&
+                        sharedPref.getString("contrasenha", "").equals(etIntContraseña.getText().toString())) {
+
+                    Intent intent = new Intent(v.getContext(), ListaPeliculasActivity.class);
+
+                    startActivity(intent);
+
+                }else{
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(miActivity);
+                    builder.setMessage(R.string.DialogUsarioContraseñaMalIntroducidos);
+                    builder.setPositiveButton(R.string.validar, null);
+                    builder.show();
+
+
+                }
+
+
 
             }
         });
@@ -101,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("MainActivity", "Se ha pulsado el boton hacia atras"); //esto hace que aparezca el msg en el logcat
 
-        Toast toast = Toast.makeText(this, "Anda a tomar por el culo maricon", Toast.LENGTH_SHORT); //aparece el mensaje cuando realizas la accion
+        Toast toast = Toast.makeText(this, "Adios", Toast.LENGTH_SHORT); //aparece el mensaje cuando realizas la accion
         toast.show(); //esto es para mostrar el mensaje
     }
 
@@ -124,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mostrarContrasenha(View v){
-      EditText view =  findViewById(R.id.etintContraseña);
+      EditText view =  findViewById(R.id.etintContraseñaMain);
       view.setInputType(InputType.TYPE_TEXT_VARIATION_NORMAL);
     }
 

@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ejemplo1.R;
@@ -22,6 +23,7 @@ public class RegistroActivity extends AppCompatActivity {
     private EditText etEmail;
     private EditText etPass;
     private EditText etRepPass;
+
 
     private Activity miActivity;
 
@@ -39,6 +41,7 @@ public class RegistroActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etIntMailRegistro);
         etPass = findViewById(R.id.etIntPwdRegistro);
         etRepPass = findViewById(R.id.etIntRepPwdRegistro);
+
 
         String em = sharedPref.getString("email", "");
         String pw = sharedPref.getString("contrasenha", "");
