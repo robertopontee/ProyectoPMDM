@@ -31,7 +31,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/etUsrRegistro"
+            android:id="@+id/tvUsrRegistro"
             android:layout_width="130dp"
             android:layout_height="29dp"
             android:layout_marginStart="32dp"
@@ -46,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@+id/TituloRegistro" />
 
         <TextView
-            android:id="@+id/etMailRegistro"
+            android:id="@+id/tvMailRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -58,10 +58,10 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.043"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etUsrRegistro" />
+            app:layout_constraintTop_toBottomOf="@+id/tvUsrRegistro" />
 
         <TextView
-            android:id="@+id/etPwdRegistro"
+            android:id="@+id/tvPwdRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -73,10 +73,10 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etMailRegistro" />
+            app:layout_constraintTop_toBottomOf="@+id/tvMailRegistro" />
 
         <TextView
-            android:id="@+id/etRepPwdRegistro"
+            android:id="@+id/tvRepPwdRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -88,7 +88,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.046"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPwdRegistro" />
+            app:layout_constraintTop_toBottomOf="@+id/tvPwdRegistro" />
 
         <EditText
             android:id="@+id/etIntUsrRegistro"
@@ -101,10 +101,10 @@
             android:textAlignment="center"
             android:textSize="@dimen/tamaño_titulo_ET"
             android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/etUsrRegistro"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUsrRegistro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/etUsrRegistro" />
+            app:layout_constraintTop_toTopOf="@+id/tvUsrRegistro" />
 
         <EditText
             android:id="@+id/etIntMailRegistro"
@@ -117,10 +117,10 @@
             android:textAlignment="center"
             android:textSize="@dimen/tamaño_titulo_ET"
             android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/etMailRegistro"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMailRegistro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/etMailRegistro" />
+            app:layout_constraintTop_toTopOf="@+id/tvMailRegistro" />
 
         <EditText
             android:id="@+id/etIntPwdRegistro"
@@ -133,10 +133,10 @@
             android:textAlignment="center"
             android:textSize="@dimen/tamaño_titulo_ET"
             android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/etPwdRegistro"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPwdRegistro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/etPwdRegistro" />
+            app:layout_constraintTop_toTopOf="@+id/tvPwdRegistro" />
 
         <EditText
             android:id="@+id/etIntRepPwdRegistro"
@@ -149,10 +149,10 @@
             android:textAlignment="center"
             android:textSize="@dimen/tamaño_titulo_ET"
             android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/etRepPwdRegistro"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRepPwdRegistro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/etRepPwdRegistro" />
+            app:layout_constraintTop_toTopOf="@+id/tvRepPwdRegistro" />
 
         <Button
             android:id="@+id/btRegistro"
@@ -168,7 +168,7 @@
             app:backgroundTint="#ef9a9a"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etRepPwdRegistro" />
+            app:layout_constraintTop_toBottomOf="@+id/tvRepPwdRegistro" />
 
         <TextView
             android:id="@+id/etYaTienesCuentaRegistro"

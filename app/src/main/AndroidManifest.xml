@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ListaPeliculasActivity"></activity>
-        <activity android:name=".activities.RegistroActivity">
+        <activity android:name=".activities.Anhadir_pelicula">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity"></activity>
+        <activity android:name=".activities.ListaPeliculasActivity" />
+        <activity android:name=".activities.RegistroActivity"></activity>
+        <activity android:name=".activities.MainActivity" />
     </application>
 
 </manifest>
