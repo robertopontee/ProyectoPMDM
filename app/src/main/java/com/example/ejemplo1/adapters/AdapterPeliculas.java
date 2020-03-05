@@ -14,17 +14,18 @@ import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ejemplo1.R;
-import com.example.ejemplo1.entidades.Peliculas;
+import com.example.ejemplo1.entidades.Pelicula;
+
 
 import org.w3c.dom.Text;
 
 import java.util.List;
 
 public class AdapterPeliculas extends RecyclerView.Adapter<AdapterPeliculas.MiViewHolder> {
-    private List<Peliculas> peliculas;
+    private List<Pelicula> peliculas;
     private Context context;
 
-    public AdapterPeliculas(Context context, List<Peliculas> peliculas) {
+    public AdapterPeliculas(Context context, List<Pelicula> peliculas) {
         this.peliculas = peliculas;
         this.context = context;
 
@@ -43,7 +44,7 @@ public class AdapterPeliculas extends RecyclerView.Adapter<AdapterPeliculas.MiVi
 
     @Override
     public void onBindViewHolder(@NonNull MiViewHolder holder, int position) {
-        Peliculas p = peliculas.get(position);
+        Pelicula p = peliculas.get(position);
         holder.tvTituloPelicula.setText(p.getTituloPelicula());
         holder.tvGeneroPelicula.setText(p.getGenero());
         holder.tvEdadPelicula.setText(Integer.toString(p.getEdad()));

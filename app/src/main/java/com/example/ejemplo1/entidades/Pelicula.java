@@ -1,13 +1,38 @@
 package com.example.ejemplo1.entidades;
 
-public class Peliculas {
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "pelicula")
+public class Pelicula {
+
+    @PrimaryKey
+    @ColumnInfo ( name = "id")
+    private int id;
+
+    @ColumnInfo (name = "edad")
     private int Edad;
+
+    @ColumnInfo (name = "Titulo")
     private String TituloPelicula;
+
+    @ColumnInfo (name = "Genero")
     private String Genero;
+
+    @ColumnInfo (name = "imagen")
     private int imagen;
+
+    @ColumnInfo (name = "visto")
     private boolean visto;
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getEdad() {
         return Edad;

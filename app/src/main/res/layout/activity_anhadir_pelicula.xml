@@ -1,102 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/svAnhadirPelicula"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_light"
     tools:context=".activities.Anhadir_pelicula">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="342dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="16dp"
-        android:text="Añade una Pelicula"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="42sp"
-        android:textStyle="bold"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilaIntroduceTituloPelicula"
-        android:layout_width="289dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="342dp"
+            android:layout_height="114dp"
+            android:layout_marginTop="32dp"
+            android:text="Añade una Pelicula"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="42sp"
+            android:textStyle="bold"
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputTituloPeliculaAñadir"
-            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilaIntroduceTituloPelicula"
+            android:layout_width="289dp"
             android:layout_height="wrap_content"
-            android:hint="Introduce El Titulo de la Pelicula" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilaIntroduceGeneroPelicula"
-        android:layout_width="289dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilaIntroduceTituloPelicula">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputTituloPeliculaAñadir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Introduce El Titulo de la Pelicula" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputGeneroPeliculaAñadir"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilaIntroduceGeneroPelicula"
+            android:layout_width="289dp"
             android:layout_height="wrap_content"
-            android:hint="hint" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilaIntroduceTituloPelicula">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="289dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilaIntroduceGeneroPelicula">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputGeneroPeliculaAñadir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Genero Pelicula" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilaIntroducirEdadPeliculaAñadir"
+            android:layout_width="289dp"
             android:layout_height="wrap_content"
-            android:hint="hint" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilaIntroduceGeneroPelicula">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
-        android:layout_width="289dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputEdadRecomendadaAñadir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Edad Recomendada" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="289dp"
             android:layout_height="wrap_content"
-            android:hint="hint" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilaIntroducirEdadPeliculaAñadir">
 
-    <Button
-        android:id="@+id/btnAnhadirPelicula"
-        android:layout_width="231dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="76dp"
-        android:text="Añadir Peli"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:backgroundTint="#ef9a9a"
-        android:drawableStart="@drawable/ic_movie_black2_32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Visto o no visto" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnAnhadirPelicula"
+            android:layout_width="231dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:drawableStart="@drawable/ic_movie_black2_32dp"
+            android:text="Añadir Peli"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#ef9a9a"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+            app:srcCompat="@drawable/ic_file_upload_black_24dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

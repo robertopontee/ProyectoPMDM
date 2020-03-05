@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.ejemplo1.R;
 import com.example.ejemplo1.adapters.AdapterPeliculas;
-import com.example.ejemplo1.entidades.Peliculas;
+import com.example.ejemplo1.entidades.Pelicula;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +31,7 @@ public class ListaPeliculasActivity extends AppCompatActivity {
 
         //Hacemos la Lista de las Peliculas
 
-        List<Peliculas> peliculas = crearPeliculas();
+        List<Pelicula> peliculas = crearPeliculas();
 
         //Creamos el objeto Adapter para la Lista de Peliculas
 
@@ -37,8 +40,8 @@ public class ListaPeliculasActivity extends AppCompatActivity {
         rvPeliculas.setAdapter(ListAdapter);
     }
 
-    private List<Peliculas> crearPeliculas(){
-        Peliculas p = new Peliculas();
+    private List<Pelicula> crearPeliculas(){
+        Pelicula p = new Pelicula();
 
         p.setTituloPelicula("El viaje de Chihiro");
         p.setGenero("Fantasía");
@@ -46,26 +49,31 @@ public class ListaPeliculasActivity extends AppCompatActivity {
         p.setVisto(true);
         p.setImagen(R.drawable.imagenchihiro);
 
-        Peliculas p2 = new Peliculas();
+        Pelicula p2 = new Pelicula();
         p2.setTituloPelicula("La Princesa Mononoke");
         p2.setGenero("Accion");
         p2.setEdad(+8);
         p2.setVisto(false);
         p2.setImagen(R.drawable.princesamonono);
 
-        Peliculas p3 = new Peliculas();
+        Pelicula p3 = new Pelicula();
         p3.setTituloPelicula("Totoro");
         p3.setGenero("Fantasia");
         p3.setEdad(+10);
         p3.setVisto(false);
         p3.setImagen(R.drawable.imagentotoro);
 
-        List<Peliculas> peliculasList = new ArrayList<>();
+        List<Pelicula> peliculasList = new ArrayList<>();
 
         peliculasList.add(p);
         peliculasList.add(p2);
         peliculasList.add(p3);
 
         return peliculasList;
+    }
+
+    public void cambiarActivityAñadirPelicula(View v){
+        Intent intent = new Intent (this, Anhadir_pelicula.class);
+        startActivity(intent);
     }
 }

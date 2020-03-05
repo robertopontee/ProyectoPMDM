@@ -3,6 +3,7 @@ package com.example.ejemplo1.activities;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -19,6 +20,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ejemplo1.R;
+import com.example.ejemplo1.entidades.AppDataBase;
+import com.example.ejemplo1.entidades.Usuario;
 
 public class MainActivity extends AppCompatActivity {
     private SharedPreferences sharedPref;
@@ -44,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        miActivity = this;
 
         sharedPref = getSharedPreferences("login", Context.MODE_PRIVATE);
 
